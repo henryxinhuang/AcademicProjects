@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{D1311EB8-1EF3-4991-8F52-009759D68F25}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AutoFences</RootNamespace>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AssemblyName>AutoFences</AssemblyName>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>packages\Xamarin.Android.Support.v4.21.0.3.0\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>packages\Xamarin.Android.Support.v7.RecyclerView.21.0.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>packages\Xamarin.Android.Support.v7.AppCompat.21.0.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.MediaRouter">
+      <HintPath>packages\Xamarin.Android.Support.v7.MediaRouter.21.0.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.MediaRouter.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.CardView">
+      <HintPath>packages\Xamarin.Android.Support.v7.CardView.21.0.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp.Portable">
+      <HintPath>packages\FubarCoder.RestSharp.Portable.2.4.0\lib\MonoAndroid10\RestSharp.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Mojio.Client">
+      <HintPath>packages\Mojio.Client.1.8.5.0\lib\portable-net45+sl50+win+wp80+MonoAndroid10+MonoTouch10\Mojio.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Mojio">
+      <HintPath>packages\Mojio.Client.1.8.5.0\lib\portable-net45+sl50+win+wp80+MonoAndroid10+MonoTouch10\Mojio.dll</HintPath>
+    </Reference>
+    <Reference Include="GooglePlayServicesLib">
+      <HintPath>packages\Xamarin.GooglePlayServices.22.0.0.2\lib\MonoAndroid41\GooglePlayServicesLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Client">
+      <HintPath>packages\Microsoft.AspNet.SignalR.Client.2.2.0\lib\portable-net45+sl5+netcore45+wp8+wp81\Microsoft.AspNet.SignalR.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>packages\Microsoft.Net.Http.2.2.29\lib\monoandroid\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>packages\Microsoft.Net.Http.2.2.29\lib\monoandroid\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NavigationDrawerActivity.cs" />
+    <Compile Include="FragmentAdapter.cs" />
+    <Compile Include="Splash.cs" />
+    <Compile Include="mapActivity.cs" />
+    <Compile Include="SignalRHelper.cs" />
+    <Compile Include="AutoFencesService.cs" />
+    <Compile Include="tripviewActivity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_bottom_solid_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_solid_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_stacked_solid_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_texture_tile_autofences.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_transparent_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_cab_done_default_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_cab_done_focused_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_cab_done_pressed_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cab_background_bottom_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cab_background_top_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\list_focused_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\list_pressed_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu_dropdown_panel_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\progress_bg_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\progress_primary_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\progress_secondary_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_default_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_disabled_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_focused_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_pressed_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_selected_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_selected_focused_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_selected_pressed_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_unselected_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_unselected_focused_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_unselected_pressed_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ab_bottom_solid_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ab_solid_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ab_stacked_solid_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ab_texture_tile_autofences.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ab_transparent_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\btn_cab_done_default_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\btn_cab_done_focused_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\btn_cab_done_pressed_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\cab_background_bottom_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\cab_background_top_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\list_focused_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\list_pressed_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\menu_dropdown_panel_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\progress_bg_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\progress_primary_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\progress_secondary_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\spinner_ab_default_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\spinner_ab_disabled_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\spinner_ab_focused_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\spinner_ab_pressed_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_selected_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_selected_focused_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_selected_pressed_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_unselected_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_unselected_focused_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_unselected_pressed_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ab_bottom_solid_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ab_solid_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ab_stacked_solid_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ab_texture_tile_autofences.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ab_transparent_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\btn_cab_done_default_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\btn_cab_done_focused_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\btn_cab_done_pressed_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\cab_background_bottom_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\cab_background_top_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\list_focused_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\list_pressed_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\menu_dropdown_panel_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\progress_bg_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\progress_primary_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\progress_secondary_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\spinner_ab_default_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\spinner_ab_disabled_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\spinner_ab_focused_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\spinner_ab_pressed_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_selected_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_selected_focused_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_selected_pressed_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_unselected_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_unselected_focused_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_unselected_pressed_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ab_bottom_solid_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ab_solid_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ab_stacked_solid_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ab_texture_tile_autofences.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ab_transparent_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\btn_cab_done_default_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\btn_cab_done_focused_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\btn_cab_done_pressed_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\cab_background_bottom_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\cab_background_top_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\list_focused_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\list_pressed_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\menu_dropdown_panel_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\progress_bg_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\progress_primary_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\progress_secondary_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\spinner_ab_default_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\spinner_ab_disabled_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\spinner_ab_focused_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\spinner_ab_pressed_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_selected_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_selected_focused_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_selected_pressed_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_unselected_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_unselected_focused_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_unselected_pressed_autofences.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_logo.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_logo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_logo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_logo.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_logo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\map_placeholder.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\map_placeholder.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\map_placeholder.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\map_placeholder.png" />
+    <AndroidResource Include="Resources\drawable\map_placeholder.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\action_search.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\drawer_shadow.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_drawer.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\action_search.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\drawer_shadow.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_drawer.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\action_search.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\drawer_shadow.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_drawer.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\sample_dashboard_item_background.9.png" />
+    <AndroidResource Include="Resources\menu\navigation_drawer.xml" />
+    <AndroidResource Include="Resources\layout\activity_navigation_drawer.xml" />
+    <AndroidResource Include="Resources\layout\drawer_list_item.xml" />
+    <AndroidResource Include="Resources\layout\Settings.xml" />
+    <AndroidResource Include="Resources\layout\Help.xml" />
+    <AndroidResource Include="Resources\layout\Splash.axml" />
+    <AndroidResource Include="Resources\values-v21\styles.xml" />
+    <AndroidResource Include="Resources\drawable\ic_logo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_drawer.png" />
+    <AndroidResource Include="Resources\layout\mapLayout.axml" />
+    <AndroidResource Include="Resources\layout\Display.xml" />
+    <AndroidResource Include="Resources\drawable\adventure.png" />
+    <AndroidResource Include="Resources\drawable\gas.png" />
+    <AndroidResource Include="Resources\drawable\speedometer.png" />
+    <AndroidResource Include="Resources\drawable\stopwatch.png" />
+    <AndroidResource Include="Resources\drawable\mapButton.png" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\layout\tripStatus.axml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <Import Project="packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
+    <Folder Include="Resources\values-v21\" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="googleplayservices">
+      <Version>22.0.0.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="AFLib\AFLib.csproj">
+      <Project>{F6D43115-56C6-4193-9277-74AEADC8CA6C}</Project>
+      <Name>AFLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
