@@ -1,0 +1,36 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+     <item
+        android:id="@+id/connect_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/connect_settings"/>
+      <item
+        android:id="@+id/disconnect_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/disconnect_settings"/>
+      <item
+        android:id="@+id/mutede2_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/mutede2_settings"/>
+      <item
+        android:id="@+id/unmutede2_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/unmutede2_settings"/>
+      
+          <item android:id="@+id/RecordStop_settings"
+        android:title="@string/RecordStop_settings"
+        android:orderInCategory="100" 
+        android:showAsAction="never"/>
+    
+    <item android:id="@+id/PlayStopRecorded_settings"
+        android:title="@string/PlayStopRecorded_settings"
+        android:orderInCategory="100" 
+        android:showAsAction="never"/>
+      
+    <item android:id="@+id/menu_settings"
+        android:title="@string/menu_settings"
+        android:orderInCategory="100" />
+</menu>

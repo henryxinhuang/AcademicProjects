@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <ListPreference
+        android:entries="@array/listentries"
+        android:entryValues="@array/listvalues"
+        android:key="playOptions"
+        android:title="Play Options" />
+
+    <EditTextPreference
+        android:key="ip"
+        android:summary="eg. 192.168.0.100"
+        android:title="IP Address" >
+    </EditTextPreference>
+    <EditTextPreference
+        android:key="port"
+        android:summary="eg. 50002"
+        android:title="Port Number" >
+    </EditTextPreference>
+    <SwitchPreference
+        android:key="mute"
+        android:title="Mute" >
+    </SwitchPreference>
+    <SwitchPreference
+        android:key="automaticallyConnect"
+        android:title="Automatically Connect" >
+    </SwitchPreference>
+
+</PreferenceScreen>
